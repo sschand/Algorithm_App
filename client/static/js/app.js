@@ -1,1 +1,1 @@
-var algorithmApp = angular.module('algorithmApp', ['ngRoute']);
+var algorithmApp = angular.module('algorithmApp', ['ngRoute', 'ui.materialize']);
