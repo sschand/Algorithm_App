@@ -5,6 +5,6 @@ var ChatSchema = new mongoose.Schema({
   chats: [{type: String, required:true}],
   chat_id: {type: Schema.Types.ObjectId, ref: "Chat"},
   algorithm_id: {type: Schema.Types.ObjectId, ref: "Algorithm"}
-});
+}, {timestamps: true});
 
 mongoose.model('Chat', ChatSchema);
