@@ -22,3 +22,13 @@ var algorithmSchema = new mongoose.Schema({
 
 // register schema as a model
 mongoose.model('Algorithm', algorithmSchema);
+
+/***** Users Schema *****/
+var UsersSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    password: String,
+    algorithms: [{ alg_id: , solution: }],
+})
+
+mongoose.model('Users', UsersSchema);
