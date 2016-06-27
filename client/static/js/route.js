@@ -6,6 +6,12 @@ algorithmApp.config(function ($routeProvider) {
     .when('/dashboard',{
         templateUrl: 'partials/dashboard.html'
     })
+    .when('/profile',{
+        templateUrl: 'partials/profile.html'
+    })
+    .when('/docs',{
+        templateUrl: 'partials/docs.html'
+    })
     .otherwise({
       redirectTo: '/'
     });
