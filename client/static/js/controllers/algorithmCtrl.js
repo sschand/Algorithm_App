@@ -1,10 +1,17 @@
-algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory) {
+algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, userFactory) {
 
  $scope.arrays = [];
  $scope.strings = [];
  $scope.slls = [];
  $scope.bsts = [];
+ $scope.current_user = [];
 
+
+
+
+ ////////////////////////////////////////////////////////
+ //        getting algorithms from DB                  //
+ ////////////////////////////////////////////////////////
  algorithmFactory.getArray(function(data){
    $scope.arrays = data;
  });
@@ -21,5 +28,11 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory) {
    $scope.bsts = data;
  });
 
+ ////////////////////////////////////////////////////////
+  //          get current user                         //
+ ////////////////////////////////////////////////////////
+ userFactory.getUser(function(data){
+   $scope.current_user = data;
+ })
 
 });
