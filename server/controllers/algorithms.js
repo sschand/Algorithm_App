@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
 var Algorithm = mongoose.model('Algorithm');
+var User = mongoose.model('User');
+
 module.exports = (function(){
     return {
         getArray: function(req,res){
@@ -56,15 +58,23 @@ module.exports = (function(){
         addUser: function(req, res){
 
             console.log('addUser: ', req.body);
-            // Algorithm.findOne({_id: req.params.name}, function(err, doc){
-            // if(err){
-            //     console.log('error occured');
-            // }else {
-            //     doc.amountLeft =  doc.amountLeft - parseInt(req.params.quantity);
-            //     doc.save();
-            //     res.redirect('/');
-            // }
-        // })
+            Algorithm.findOne({_id: req.body.id}, function(err, result){
+                if(err){
+                    console.log('error occured');
+                }else {
+                    result.users.push(req.body.user);
+                    result.save();
+                    User.findOne({_id: req.body.user._id}, function(err, user){
+                        if(err){
+                            console.log('error occured');
+                        }else {
+                            user.algorithms.push(req.body.id);
+                            user.save();
+                        }
+                    });
+                }
+            });
+
         }
 
 

@@ -4,7 +4,7 @@ algorithmApp.controller('dashboardCtrl', function ($scope, algorithmFactory, use
     $scope.strings = [];
     $scope.slls = [];
     $scope.bsts = [];
-    $scope.current_user = [];
+    $scope.current_user = userFactory.getUser();
 
 
 

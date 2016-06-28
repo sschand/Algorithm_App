@@ -16,7 +16,7 @@ var algorithmSchema = new mongoose.Schema({
     algorithm: {type: String},
     solution: {type: String},
     expire_dt: {type: Date},
-    users: [{type: mongoose.Schema.Types.ObjectId, ref: "User"}],
+    users: [],
     chat_id: {type: mongoose.Schema.Types.ObjectId, ref: "Chat"},
     category: {type: String}
 }, {timestamps: true})
