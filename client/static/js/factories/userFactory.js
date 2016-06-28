@@ -11,6 +11,20 @@ algorithmApp.factory('userFactory', function($http){
 
     };
 
+    // Login user
+    factory.loginUser = function(loginInfo, callback){
+        $http.post('/getUser', loginInfo).success(function(data){
+            if(!data.login_error){
+                current_user = data;
+            }
+            callback(data);
+        })
+    }
+
+    // Get current_user from factory for all pages
+    factory.getUser = function(callback){
+        callback(current_user);
+    }
 
     return factory;
 });

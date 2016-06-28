@@ -23,9 +23,18 @@ algorithmApp.controller('userCtrl', function ($scope, userFactory, $location) {
     // Login user
     $scope.loginUser = function(){
         userFactory.loginUser($scope.login, function(data){
-            // $scope.current_user = data;
-            
-            // set user info in factory
+            if(!data.login_error){
+                $scope.login_error = '';
+                $scope.current_user = data.user;
+                $('#login').closeModal();
+
+                $location.url('/dashboard');
+                // console.log('current user: ',current_user);
+            }else{
+
+                $scope.login_error = data.login_error;
+
+            }
             // Take to dashboard page
 
         });
