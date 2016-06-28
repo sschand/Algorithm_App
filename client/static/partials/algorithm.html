@@ -1,0 +1,130 @@
+<nav>
+    <div class="nav-wrapper">
+        <a class="brand-logo">Algorithm App</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#docs">Docs</a></li>
+            <li class="active"><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#profile">Profile</a><i class="fa fa-user" aria-hidden="true"></i></li>
+            <li><a href="#home">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container" ng-controller="algorithmCtrl">
+    <span>Hi, {{current_user.name}}</span>
+    <h5><strong>{{current_algo.name}}</strong> <span class="pull-right">Time Left:</span></h5>
+    <blockquote>
+        <strong>{{current_algo.algorithm}}</strong>
+    </blockquote>
+
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea" g-model="newSolution.solution"></textarea>
+                    <label for="textarea1">Your Solution</label>
+                    <button class="waves-effect waves-light btn red" type="submit" name="button" ng-click="check()">Check</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="container div_border">
+        <h3>Conversation Board</h3>
+        <div class="user_list">
+            <h5>Users:</h5>
+            <div class="users container">
+
+            </div>
+        </div>
+        <div class="chat_room">
+            <h5>Ready..set...conversate!</h5>
+
+            <div class="container">
+                <div class="chat ">
+                </div>
+            </div>
+        </div>
+
+        <form id="message_form" action="index.html" method="post">
+            <input type="hidden" id="userID" name="userID" >
+            <textarea class="u-full-width" id="message" name="message"></textarea>
+            <input class="button-primary right" type="submit" value="Submit">
+        </form>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+    //     var socket = io.connect();
+    //
+    //     var uID;
+    //
+    //     var name;
+    //     // console.log(prompt);
+    //     // if(!prompt){
+    //     //     console.log('here');
+    //         // User first enters room:
+    //         name = prompt('What is your name?');
+    //         socket.emit("got_new_user", {name: name});
+    //     // }else{
+    //     //     console.log('not');
+    //     // }
+    //
+    //
+    //
+    //     //Listeners:
+    //     // new user
+    //     socket.on("new_user", function(data){
+    //
+    //         var id = JSON.stringify(data.uId);
+    //         var id2 = id.slice(3, -1);
+    //
+    //         $(".users").append("<p class="+id2+">"+data.name+"</p>");
+    //     })
+    //
+    //     // existing users
+    //     socket.on("existing_users", function(data){
+    //         for(var key in data.existing_users){
+    //             if(data.uID != key){
+    //
+    //                 var id = JSON.stringify(key);
+    //                 var id2 = id.slice(3,-1);
+    //
+    //                 $(".users").append("<p class='"+id2+"'>"+ data.existing_users[key].name+ "</p>");
+    //             }
+    //         }
+    //     })
+    //
+    //
+    //     $("#message_form").submit(function(e){
+    //         e.preventDefault();
+    //         var userID = $("#userID").val();
+    //         var message = $("#message").val();
+    //
+    //         socket.emit("new_message", {userID: userID, name: name, message: message});
+    //     });
+    //
+    //     socket.on("message_added", function(){
+    //         $("#message").val('');
+    //     });
+    //
+    //     socket.on("new_message_added", function(data){
+    //         $(".chat").html('');
+    //         for (var message in data.messages){
+    //             $(".chat").append('<div class="row"><div class="two columns">'+ data.messages[message].name +': </div><div class="ten columns">'+data.messages[message].message+'</div></div>');
+    //         }
+    //     });
+    //
+    //     socket.on("disconnect_user", function(data){
+    //
+    //         var id = JSON.stringify(data.disconnect_id);
+    //         var id2 = id.slice(3,-1);
+    //
+    //         $("."+id2+"").css('color', '#888').css('font-style', 'italic');
+    //     });
+    //
+})
+</script>

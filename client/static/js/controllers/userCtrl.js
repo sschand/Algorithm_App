@@ -13,7 +13,6 @@ algorithmApp.controller('userCtrl', function ($scope, userFactory, $location) {
             $scope.password_error = '';
 
             userFactory.create($scope.newUser, function(data){
-                // $scope.current_user = data;
                 $('#register').closeModal();
                 alert('You have been registered, please log in to continue');
             });
