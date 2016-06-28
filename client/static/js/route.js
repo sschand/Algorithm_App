@@ -12,6 +12,9 @@ algorithmApp.config(function ($routeProvider) {
     .when('/docs',{
         templateUrl: 'partials/docs.html'
     })
+    .when('/algorithm/:id',{
+        templateUrl: 'partials/algorithm.html'
+    })
     .otherwise({
       redirectTo: '/'
     });
