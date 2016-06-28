@@ -1,7 +1,7 @@
 var algorithms = require('../controllers/algorithms.js');
 var users = require('../controllers/users.js');
 
-<<<<<<< HEAD
+module.exports= function(app){
  app.get('/array', function(req,res){
     user.getArray(req,res);
    });
