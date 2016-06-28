@@ -28,7 +28,7 @@ algorithmApp.factory('algorithmFactory', function($http){
   }
 
   factory.getBst = function(callback){
-    $http.get('/getBst').success(function(result){
+    $http.get('/bst').success(function(result){
       bstms = result;
       callback(bsts);
     });

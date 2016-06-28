@@ -3,19 +3,19 @@ var users = require('../controllers/users.js');
 
 module.exports= function(app){
  app.get('/array', function(req,res){
-    user.getArray(req,res);
+    algorithms.getArray(req,res);
    });
 
  app.get('/string', function(req,res){
-    user.getString(req,res);
+    algorithms.getString(req,res);
    });
 
  app.get('/sll', function(req,res){
-    user.getSll(req,res);
+    algorithms.getSll(req,res);
    });
 
  app.get('/bst', function(req,res){
-    user.getBst(req,res);
+    algorithms.getBst(req,res);
    });
 
     // Register user
