@@ -10,48 +10,61 @@
     </div>
 </nav>
 
-<div class="container" ng-controller="algorithmCtrl">
-    <span>Hi, {{current_user.name}}</span>
-    <h5><strong>{{current_algo.name}}</strong> <span class="pull-right">Time Left:</span></h5>
-    <blockquote>
-        <strong>{{current_algo.algorithm}}</strong>
-    </blockquote>
+<div class="container" >
+    <div class="wrap hide" ng-controller="algorithmCtrl">
+        <div class="left-col">
+            <span>Hi, {{current_user.name}}</span>
+            <h5><strong>{{current_algo.name}}</strong> <span class="pull-right">Time Left:</span></h5>
+            <blockquote>
+                <strong>{{current_algo.algorithm}}</strong>
+            </blockquote>
 
-    <div class="row">
-        <form class="col s12">
             <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="textarea1" class="materialize-textarea" g-model="newSolution.solution"></textarea>
-                    <label for="textarea1">Your Solution</label>
-                    <button class="waves-effect waves-light btn red" type="submit" name="button" ng-click="check()">Check</button>
-                </div>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="textarea1" class="materialize-textarea" g-model="newSolution.solution"></textarea>
+                            <label for="textarea1">Your Solution</label>
+                            <button class="waves-effect waves-light btn red" type="submit" name="button" ng-click="check()">Check</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
-    </div>
 
-    <div class="container div_border">
-        <h3>Conversation Board</h3>
-        <div class="user_list">
-            <h5>Users:</h5>
-            <div class="users container">
+            <div class="container div_border">
+                <h3>Conversation Board</h3>
+                <div class="user_list">
+                    <h5>Users:</h5>
+                    <div class="users container">
+
+                    </div>
+                </div>
+                <div class="chat_room">
+                    <h5>Ready..set...conversate!</h5>
+
+                    <div class="container">
+                        <div class="chat ">
+                        </div>
+                    </div>
+                </div>
+
+                <form id="message_form" action="index.html" method="post">
+                    <input type="hidden" id="userID" name="userID" >
+                    <textarea class="u-full-width" id="message" name="message"></textarea>
+                    <input class="button-primary right" type="submit" value="Submit">
+                </form>
 
             </div>
         </div>
-        <div class="chat_room">
-            <h5>Ready..set...conversate!</h5>
+        <div class="right-col">
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+               </p>
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+               </p>
 
-            <div class="container">
-                <div class="chat ">
-                </div>
-            </div>
         </div>
-
-        <form id="message_form" action="index.html" method="post">
-            <input type="hidden" id="userID" name="userID" >
-            <textarea class="u-full-width" id="message" name="message"></textarea>
-            <input class="button-primary right" type="submit" value="Submit">
-        </form>
-
     </div>
 </div>
 

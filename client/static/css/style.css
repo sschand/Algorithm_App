@@ -1,3 +1,11 @@
+html, body {
+   height: 100%;
+   min-height: 100%;
+   position: relative;
+   font-family: "proxima-nova",sans-serif;
+}
+
+
 .show{
   margin:20px;
 }
@@ -8,4 +16,31 @@
 
 .move h5{
   margin-bottom: 30px;
+}
+
+.wrap {
+   height: 100%;
+}
+
+.right-col {
+    padding-left:30px;
+   height: 100%;
+   overflow: scroll;
+}
+
+.left-col {
+   width: 70%;
+   float: left;
+   height: 100%;
+   position: relative;
+   -webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+   display: block;
+   background-color: #fff;
+}
+
+
+.hide {
+   display: none;
 }
