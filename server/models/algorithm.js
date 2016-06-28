@@ -28,7 +28,7 @@ var UsersSchema = new mongoose.Schema({
     name: String,
     email: String,
     password: String,
-    algorithms: [],
+    algorithms: []
 })
 
 mongoose.model('User', UsersSchema);
