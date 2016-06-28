@@ -23,4 +23,9 @@ module.exports= function(app){
         users.createUser(req, res);
     });
 
+    // Login user
+    app.post('/getUser', function(req, res){
+        users.getUser(req, res);
+    });
+
 }

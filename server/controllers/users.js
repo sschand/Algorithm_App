@@ -15,7 +15,21 @@ module.exports = (function(){
                     res.json({added: 'added'});
                 }
             })
-        }
+        },
 
+        // Get User
+        getUser: function(req, res){
+            User.find({email: req.body.email, password: req.body.password}, function(err,result){
+                if(err){
+                    console.log("Error finding user: ", err);
+                } else {
+                    if(result.length == 0){
+                        res.json({login_error: 'Please check your login information and try again'});
+                    }else{
+                        res.json({user: result});
+                    }
+                }
+            });
+        }
     }
 })();
