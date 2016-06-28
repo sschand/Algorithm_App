@@ -17,59 +17,63 @@
         </div>
     </nav>
 
-<div class="container">
-    <h2>About</h2>
-    <p class="flow-text">The Algorithm App includes Category based algorithms that you can work on live with other users. Each algorithm is has an expiration time before which users can begin working the algorithm, check their solution with our solution, submit their solution, or have a live chat with other users that are concurrently working on the same algorithm.</p>
+    <div class="container">
+        <h2>About</h2>
+        <p class="flow-text">The Algorithm App includes Category based algorithms that you can work on live with other users. Each algorithm is has an expiration time before which users can begin working the algorithm, check their solution with our solution, submit their solution, or have a live chat with other users that are concurrently working on the same algorithm.</p>
 
-    <p class="flow-text">After the user checks their solution against our solution, they can submit their solution which gets added to their user profile allowing them to keep track of their past algorithms.</p>
-
-
+        <p class="flow-text">After the user checks their solution against our solution, they can submit their solution which gets added to their user profile allowing them to keep track of their past algorithms.</p>
 
 
-    <!-- Modal Trigger -->
 
-    <!-- Modal Structure -->
-    <div id="register" class="modal">
-        <div class="modal-content">
-            <h4>Register</h4>
-            <div class="row">
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="name" type="text" class="validate" ng-model="newUser.name">
-                            <label for="name">Name</label>
+
+        <!-- Modal Trigger -->
+
+        <!-- Modal Structure -->
+        <div id="register" class="modal">
+            <div class="modal-content">
+                <h4>Register</h4>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="name" type="text" class="validate" ng-model="newUser.name">
+                                <label for="name">Name</label>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="email" type="email" class="validate" ng-model="newUser.email">
-                            <label for="email">Email</label>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="email" class="validate" ng-model="newUser.email">
+                                <label for="email">Email</label>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="password" type="password" class="validate" ng-model="newUser.password">
-                            <label for="password">Password</label>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password" type="password" class="validate" ng-model="newUser.password">
+                                <label for="password">Password</label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        {{ password_error }}
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="c_password" type="password" class="validate" ng-model="newUser.c_password">
-                            <label for="c_password">Confirm Password</label>
+                        <div class="row">
+                            {{ password_error }}
                         </div>
-                    </div>
-                </form>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="c_password" type="password" class="validate" ng-model="newUser.c_password">
+                                <label for="c_password">Confirm Password</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-action waves-effect waves-green btn-flat" ng-click="registerUser()">Register</a>
             </div>
         </div>
-        <div class="modal-footer">
-            <a class="modal-action  waves-effect waves-green btn-flat" ng-click="registerUser()">Register</a>
-        </div>
     </div>
-</div>
-
+    <script type="text/javascript">
+        // $(document).ready(function(){
+        //     console.log('current_user');
+        // });
+    </script>
 </div>

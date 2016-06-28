@@ -31,4 +31,4 @@ var UsersSchema = new mongoose.Schema({
     algorithms: [],
 })
 
-mongoose.model('Users', UsersSchema);
+mongoose.model('User', UsersSchema);
