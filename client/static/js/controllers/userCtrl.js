@@ -1,4 +1,6 @@
+
 algorithmApp.controller('userCtrl', function ($scope, userFactory, $location) {
+
     $scope.current_user;
     $scope.password_error = '';
     $scope.login_error = '';

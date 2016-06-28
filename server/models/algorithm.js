@@ -12,6 +12,7 @@ mongoose.model('Chat', ChatSchema);
 
 /***** Algorighm Schema *****/
 var algorithmSchema = new mongoose.Schema({
+    name: {type: String},
     algorithm: {type: String},
     solution: {type: String},
     expire_dt: {type: Date},
