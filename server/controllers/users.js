@@ -26,7 +26,7 @@ module.exports = (function(){
                     if(result.length == 0){
                         res.json({login_error: 'Please check your login information and try again'});
                     }else{
-                        res.json({user: result});
+                        res.json(result);
                     }
                 }
             });
