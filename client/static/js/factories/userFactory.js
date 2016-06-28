@@ -1,6 +1,7 @@
-algorithmApp.factory('userFactory', function($http){
+algorithmApp.factory('userFactory', function($http, $localStorage, $sessionStorage){
     var factory = {};
     var current_user = {};
+    $sessionStorage.current_user = {};
 
     // Create User
     factory.create = function(userInfo, callback){
@@ -15,16 +16,16 @@ algorithmApp.factory('userFactory', function($http){
     factory.loginUser = function(loginInfo, callback){
         $http.post('/getUser', loginInfo).success(function(data){
             if(!data.login_error){
-                current_user = data;
+                $sessionStorage.current_user = data;
             }
             callback(data);
         })
     }
 
-    // Get current_user from factory for all pages
-    factory.getUser = function(callback){
-        callback(current_user);
+    factory.getUser = function(){
+      return $sessionStorage.current_user;
     }
+
 
     return factory;
 });

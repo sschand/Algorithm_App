@@ -1,14 +1,19 @@
-algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, userFactory) {
+algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, userFactory, $localStorage,
+    $sessionStorage) {
 
  $scope.arrays = [];
  $scope.strings = [];
  $scope.slls = [];
  $scope.bsts = [];
- $scope.current_user = [];
 
 
+ ////////////////////////////////////////////////////////
+  //          get current user                         //
+ ////////////////////////////////////////////////////////
+ $scope.current_user = userFactory.getUser()
 
 
+console.log($scope);
  ////////////////////////////////////////////////////////
  //        getting algorithms from DB                  //
  ////////////////////////////////////////////////////////
@@ -28,11 +33,6 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
    $scope.bsts = data;
  });
 
- ////////////////////////////////////////////////////////
-  //          get current user                         //
- ////////////////////////////////////////////////////////
- userFactory.getUser(function(data){
-   $scope.current_user = data;
- })
+
 
 });
