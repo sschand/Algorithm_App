@@ -56,8 +56,6 @@ module.exports = (function(){
         },
 
         addUser: function(req, res){
-
-            console.log('addUser: ', req.body);
             Algorithm.findOne({_id: req.body.id}, function(err, result){
                 if(err){
                     console.log('error occured');
@@ -70,6 +68,7 @@ module.exports = (function(){
                         }else {
                             user.algorithms.push(req.body.id);
                             user.save();
+                            res.json({user: user});
                         }
                     });
                 }
