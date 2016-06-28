@@ -13,7 +13,6 @@ algorithmApp.controller('userCtrl', function ($scope, userFactory, $location) {
             $scope.password_error = '';
 
             userFactory.create($scope.newUser, function(data){
-                // $scope.current_user = data;
                 $('#register').closeModal();
                 alert('You have been registered, please log in to continue');
             });
@@ -27,15 +26,10 @@ algorithmApp.controller('userCtrl', function ($scope, userFactory, $location) {
                 $scope.login_error = '';
                 $scope.current_user = data.user;
                 $('#login').closeModal();
-
                 $location.url('/dashboard');
-                // console.log('current user: ',current_user);
             }else{
-
                 $scope.login_error = data.login_error;
-
             }
-            // Take to dashboard page
 
         });
     }
