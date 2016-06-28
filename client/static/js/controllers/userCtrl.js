@@ -1,4 +1,4 @@
-algorithmApp.controller('algorithmCtrl', function ($scope) {
+algorithmApp.controller('userCtrl', function ($scope) {
     $scope.current_user;
 
     // Register User

@@ -12,6 +12,7 @@ mongoose.model('Chat', ChatSchema);
 
 /***** Algorighm Schema *****/
 var algorithmSchema = new mongoose.Schema({
+    name: {type: String},
     algorithm: {type: String},
     solution: {type: String},
     expire_dt: {type: Date},
@@ -28,7 +29,7 @@ var UsersSchema = new mongoose.Schema({
     name: String,
     email: String,
     password: String,
-    algorithms: [{ alg_id: , solution: }],
+    algorithms: [],
 })
 
 mongoose.model('Users', UsersSchema);

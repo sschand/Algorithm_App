@@ -11,7 +11,7 @@
     </div>
 </nav>
 
-<div class="container">
+<div class="container" ng-controller="algorithmCtrl">
  Welcome, name!
 
 
@@ -20,60 +20,32 @@
     <li>
       <div class="collapsible-header"><i class="glyphicon glyphicon-log-out"></i><i class="glyphicon glyphicon-log-in"></i>ARRAYS</div>
       <div class="collapsible-body">
-        <div class="container">
-          <a href="#dashboard">1</a><br>
-          <a href="#dashboard">2</a><br>
-          <a href="#dashboard">3</a><br>
-          <a href="#dashboard">4</a><br>
-          <a href="#dashboard">5</a><br>
-          <a href="#dashboard">6</a><br>
-          <a href="#dashboard">7</a><br>
-          <a href="#dashboard">8</a>
+        <div ng-repeat="array in arrays">
+          <a href="/show/{{array._id}}">{{array.name}}</a><br>
         </div>
       </div>
     </li>
     <li>
       <div class="collapsible-header"><i class="glyphicon glyphicon-chevron-left" aria-hidden="true"></i><i class="glyphicon glyphicon-chevron-right" aria-hidden="true"></i>STRINGS</div>
       <div class="collapsible-body">
-        <div class="container">
-          <a href="#dashboard">1</a><br>
-          <a href="#dashboard">2</a><br>
-          <a href="#dashboard">3</a><br>
-          <a href="#dashboard">4</a><br>
-          <a href="#dashboard">5</a><br>
-          <a href="#dashboard">6</a><br>
-          <a href="#dashboard">7</a><br>
-          <a href="#dashboard">8</a>
+        <div ng-repeat="string in strings">
+          <a href="/show/{{string._id}}">{{string.name}}</a><br>
         </div>
       </div>
     </li>
     <li>
       <div class="collapsible-header"><i class="glyphicon glyphicon-registration-mark"></i><i class="glyphicon glyphicon-copyright-mark"></i>SINGLY LINKED LISTS </div>
       <div class="collapsible-body">
-        <div class="container">
-          <a href="#dashboard">1</a><br>
-          <a href="#dashboard">2</a><br>
-          <a href="#dashboard">3</a><br>
-          <a href="#dashboard">4</a><br>
-          <a href="#dashboard">5</a><br>
-          <a href="#dashboard">6</a><br>
-          <a href="#dashboard">7</a><br>
-          <a href="#dashboard">8</a>
+        <div ng-repeat="sll in slls">
+          <a href="/show/{{sll._id}}">{{sll.name}}</a><br>
         </div>
       </div>
     </li>
     <li>
       <div class="collapsible-header"><i class="glyphicon glyphicon-bitcoin"></i><i class="glyphicon glyphicon-grain"></i>BINARY SERACH TREE</div>
       <div class="collapsible-body">
-        <div class="container">
-          <a href="#dashboard">1</a><br>
-          <a href="#dashboard">2</a><br>
-          <a href="#dashboard">3</a><br>
-          <a href="#dashboard">4</a><br>
-          <a href="#dashboard">5</a><br>
-          <a href="#dashboard">6</a><br>
-          <a href="#dashboard">7</a><br>
-          <a href="#dashboard">8</a>
+        <div ng-repeat="bst in bsts">
+          <a href="/show/{{bst._id}}">{{bst.name}}</a><br>
         </div>
       </div>
     </li>
