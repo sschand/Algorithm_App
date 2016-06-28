@@ -1,21 +1,17 @@
 
 algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, userFactory, $routeParams) {
-
-    // $scope.arrays = [];
-    // $scope.strings = [];
-    // $scope.slls = [];
-    // $scope.bsts = [];
-    // $scope.current_user = [];
+    $scope.users = [];
     $scope.current_algo;
     $scope.users = [];
+    $scope.current_user = userFactory.getUser();
+    $scope.users.push(current_user);
 
     $scope.algo_id = $routeParams.id;
-
 
     // Get current algorithm
     algorithmFactory.getCurrentAlgo($scope.algo_id, function(data){
         $scope.current_algo = data;
-    })
+    });
 
 
     ////////////////////////////////////////////////////////
@@ -42,9 +38,6 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
     ////////////////////////////////////////////////////////
     //          get current user                         //
     ////////////////////////////////////////////////////////
-    userFactory.getUser(function(data){
-        $scope.current_user = data;
-    })
 
 
 });

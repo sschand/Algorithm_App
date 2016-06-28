@@ -3,51 +3,51 @@
     <div class="nav-wrapper">
         <a class="brand-logo">Algorithm App</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#docs">Docs</a></li>
-        <li class="active"><a href="#dashboard">Dashboard</a></li>
-        <li><a href="#profile">Profile</a><i class="fa fa-user" aria-hidden="true"></i></li>
-        <li><a href="#home">Logout</a></li>
+            <li><a href="#docs">Docs</a></li>
+            <li class="active"><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#profile">Profile</a><i class="fa fa-user" aria-hidden="true"></i></li>
+            <li><a href="#home">Logout</a></li>
         </ul>
     </div>
 </nav>
 
 <div class="container move" ng-controller="dashboardCtrl">
- <h5> Welcome, {{ current_user[0].name }} !</h5>
+    <h5> Welcome, {{ current_user[0].name }} !</h5>
 
- <ul class="collapsible popout" data-collapsible="accordion">
-    <li>
-      <div class="collapsible-header"><i class="glyphicon glyphicon-log-out"></i><i class="glyphicon glyphicon-log-in"></i><strong>ARRAYS</strong></div>
-      <div class="collapsible-body">
-        <ul ng-repeat="array in arrays" class="show">
-          <li><a href="#algorithm/{{array._id}}" ng-click="algoUser(array._id, current_user[0])">{{array.name}}</a><br></li>
-        </ul>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="glyphicon glyphicon-chevron-left" aria-hidden="true"></i><i class="glyphicon glyphicon-chevron-right" aria-hidden="true"></i><strong>STRINGS</strong></div>
-      <div class="collapsible-body">
-        <ul ng-repeat="string in strings" class="show">
-          <li><a href="#algorithm/{{string._id}}" ng-click="algoUser(string._id, current_user[0])">{{string.name}}</a><br></li>
-        </ul>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="glyphicon glyphicon-registration-mark"></i><i class="glyphicon glyphicon-copyright-mark"></i><strong>SINGLY LINKED LISTS</strong> </div>
-      <div class="collapsible-body">
-          <ul ng-repeat="sll in slls" class="show">
-              <li><a href="#algorithm/{{sll._id}}" ng-click="algoUser(sll._id, current_user[0])">{{sll.name}}</a><br></li>
-          </ul>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="glyphicon glyphicon-bitcoin"></i><i class="glyphicon glyphicon-grain"></i><strong>BINARY SEARCH TREE</strong></div>
-      <div class="collapsible-body">
-        <ul ng-repeat="bst in bsts" class="show">
-          <li><a href="#algorithm/{{bst._id}}" ng-click="algoUser(bst._id, current_user[0])">{{bst.name}}</a><br></li>
-        </ul>
-      </div>
-    </li>
-  </ul>
+    <ul class="collapsible popout" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header"><i class="glyphicon glyphicon-log-out"></i><i class="glyphicon glyphicon-log-in"></i><strong>ARRAYS</strong></div>
+            <div class="collapsible-body">
+                <ul ng-repeat="array in arrays" class="show">
+                    <li><a href="#algorithm/{{array._id}}" ng-click="algoUser(array._id, current_user[0])">{{array.name}}</a><br></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="glyphicon glyphicon-chevron-left" aria-hidden="true"></i><i class="glyphicon glyphicon-chevron-right" aria-hidden="true"></i><strong>STRINGS</strong></div>
+            <div class="collapsible-body">
+                <ul ng-repeat="string in strings" class="show">
+                    <li><a href="#algorithm/{{string._id}}" ng-click="algoUser(string._id, current_user[0])">{{string.name}}</a><br></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="glyphicon glyphicon-registration-mark"></i><i class="glyphicon glyphicon-copyright-mark"></i><strong>SINGLY LINKED LISTS</strong> </div>
+            <div class="collapsible-body">
+                <ul ng-repeat="sll in slls" class="show">
+                    <li><a href="#algorithm/{{sll._id}}" ng-click="algoUser(sll._id, current_user[0])">{{sll.name}}</a><br></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="glyphicon glyphicon-bitcoin"></i><i class="glyphicon glyphicon-grain"></i><strong>BINARY SEARCH TREE</strong></div>
+            <div class="collapsible-body">
+                <ul ng-repeat="bst in bsts" class="show">
+                    <li><a href="#algorithm/{{bst._id}}" ng-click="algoUser(bst._id, current_user[0])">{{bst.name}}</a><br></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
 
 
 </div>
