@@ -35,9 +35,7 @@
         <div class="right-col">
                 <h6><i class="glyphicon glyphicon-question-sign"></i><strong>CONVERSATION BOARD</strong></h6>
                 <div class="user_list">
-                    <h5>Users:</h5>
                     <div class="users container">
-
                     </div>
                 </div>
                 <div class="chat_room">
@@ -51,19 +49,10 @@
 
                 <form id="message_form" action="index.html" method="post">
                     <input type="hidden" id="userID" name="userID" >
-                    <textarea class="u-full-width" id="message" name="message"></textarea>
-                    <input class="button-primary right" type="submit" value="Submit">
+                    <textarea class="u-full-width" id="message" name="message" ng-model="newchat.message"></textarea>
+                    <input class="button-primary right" type="submit" value="SEND" ng-click="addChat(current_user[0])">
                 </form>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                
         </div>
     </div>
 <!-- </div> -->

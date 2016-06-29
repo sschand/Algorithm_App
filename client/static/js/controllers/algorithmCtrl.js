@@ -12,10 +12,13 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
     // Get current algorithm
     algorithmFactory.getCurrentAlgo($scope.algo_id, function(data){
         $scope.current_algo = data;
-        console.log('current algi is:',$scope.current_algo);
+        //console.log('current algi is:',$scope.current_algo);
     });
 
-
+   $scope.addChat = function(data){
+       console.log('user is', data);
+       console.log($scope.newchat);
+   }
             var socket = io.connect();
 
             var uID;
@@ -83,33 +86,6 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
             //
             //     $("."+id2+"").css('color', '#888').css('font-style', 'italic');
             // });
-
-
-    ////////////////////////////////////////////////////////
-    //        getting algorithms from DB                  //
-    ////////////////////////////////////////////////////////
-    // algorithmFactory.getArray(function(data){
-    //   $scope.arrays = data;
-    // });
-    //
-    // algorithmFactory.getString(function(data){
-    //   $scope.strings = data;
-    // });
-    //
-    // algorithmFactory.getSll(function(data){
-    //   $scope.slls = data;
-    // });
-    //
-    // algorithmFactory.getBst(function(data){
-    //   $scope.bsts = data;
-    // });
-
-
-
-    ////////////////////////////////////////////////////////
-    //          get current user                         //
-    ////////////////////////////////////////////////////////
-
 
 
 });
