@@ -2,6 +2,7 @@
 algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, userFactory, $routeParams) {
     $scope.users = [];
     $scope.current_algo;
+
     // $scope.users = [];
     $scope.current_user = userFactory.getUser();
     // $scope.users.push($scope.current_user);
@@ -11,9 +12,8 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
     // Get current algorithm
     algorithmFactory.getCurrentAlgo($scope.algo_id, function(data){
         $scope.current_algo = data;
+        console.log('current algi is:',$scope.current_algo);
     });
-
-
 
 
             var socket = io.connect();
@@ -42,7 +42,7 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
 
                 $(".users").append("<p class="+id2+">"+data.name+"</p>");
             })
-            // 
+            //
             // // existing users
             // socket.on("existing_users", function(data){
             //     for(var key in data.existing_users){
@@ -109,6 +109,7 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
     ////////////////////////////////////////////////////////
     //          get current user                         //
     ////////////////////////////////////////////////////////
+
 
 
 });

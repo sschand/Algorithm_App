@@ -58,7 +58,7 @@
                 the watch and phone and label the bag. If we have more to store we need more containers. We then close the
                 bag. From this example, this is essentially what a variable does. A variable is a stored information that
                 we can refer or manipulate. it can store a string, an array or an object. By looking back at the code below
-                we set animal to equal to tiger, meaning we assigned the value to the variable. 
+                we set animal to equal to tiger, meaning we assigned the value to the variable.
               </p>
 
                 <code>
@@ -69,26 +69,36 @@
 
                   <h5>Okay, Let's talk about Loops!</h5>
 
-                  <p> quo, illud luptatum oporteat at his, nam quando ullamcorper te. Tempor
-                    volumus invenire nam in, mei quis dicit et. Ius dico autem at, numquam
-                    adversarium concludaturque nam at.
+                  <p>Wouldn't it be great to add code in and tell it to do this task repeatly, but only
+                    say it once? This is where loops comes in. In the code provided below is an example of
+                    a for loop. It says, var i is set to 0, and if 0 is less than to 234, the increment + 1.
+                    That means this <i>FOR</i> loop will continue to run until it is greater or equal to 234.
+                    There are a few different types of loops. The most common are <i>FOR</i> loops and <i>WHILE</i> loops.
+                    A <i>FOR</i> loop is executed when you know exactly how many times your code should run. A <i>WHILE</i>
+                    loop is combination of loops with conditionals. It's good to use when you don't know how many times the line
+                    of code will be running. Another great use to <i>break</i> out of these loops is adding <i>break</i> it's self and
+                    exit the loop. If you add <i>continue</i> onto your code, the continue statment will run the code and
+                    and iterate again.
+                  </p>
+                    <code>
+                        Break:  <br>
+                        for(var i = 0; i < 10; i++) { <br>
+                        } <br>
+                        if (i === 3) { <br>
+                        } <br>
+                        break;  <br>
+                        text += "the number is " + i + "<br>";
+                    </code>
 
-                    Veritus volumus sensibus qui an, has nominavi ponderum efficiantur at. Mei elitr
-                    scripta sententiae no, erat nominati ne sea. Ei vix luptatum consetetur
-                    intellegebat. Vix tacimates tincidunt intellegam ut, quo graece maluisset
-                    intellegat an, cu inani sanctus pro. An oblique euripidis his, ei aliquam
-                    epicuri percipit eum. Ei explicari evertitur incorrupte nec, denique ocurreret
-                    ne nam.
-
-                    An duo malis epicuri consequat, duo timeam temporibus consequuntur an. Ut tantas
-                    scaevola vis. In per propriae concludaturque, quas dicta sea an, no minim laudem
-                    mei. Summo scribentur has ea, vel ne mollis menandri praesent. An mel movet
-                    insolens.
-
-                    Id qui dicant indoctum. Quo autem qualisque assueverit ex, at solum essent
-                    virtute mea, ei copiosae tacimates mnesarchum vix. Nec an simul theophrastus.
-                    Nam vide saperet eloquentiam ex. Zril deserunt volutpat id usu, laudem mediocrem
-                    eu pro. Per consetetur, include about Break and continue</p>
+                    <code>
+                        Continue:   <br>
+                        for(i = 0;i < 10; i++) {    <br>
+                            if(i ===3) {    <br>
+                                continue    <br>
+                            }   <br>
+                            text += "the number is" + i + "<br>";
+                        }
+                    </code>
 
                     <code>
                       function array_loop(); <br>
@@ -102,43 +112,33 @@
 
                     <!-- ***** PARAMETERS ***** -->
 
-                    <h5>Parameters</h5>
+                    <h5>Hmm...Parameters?</h5>
 
-                    <p> quo, illud luptatum oporteat at his, nam quando ullamcorper te. Tempor
-                      volumus invenire nam in, mei quis dicit et. Ius dico autem at, numquam
-                      adversarium concludaturque nam at.
-
-                      Veritus volumus sensibus qui an, has nominavi ponderum efficiantur at. Mei
-                      elitr scripta sententiae no, erat nominati ne sea. Ei vix luptatum consetetur
-                      intellegebat. Vix tacimates tincidunt intellegam ut, quo graece maluisset
-                      intellegat an, cu inani sanctus pro. An oblique euripidis his, ei aliquam
-                      epicuri percipit eum. Ei explicari evertitur incorrupte nec, denique ocurreret
-                      ne nam.
-
-                      An duo malis epicuri consequat, duo timeam temporibus consequuntur an. Ut
-                      tantas scaevola vis. In per propriae concludaturque, quas dicta sea an, no
-                      minim laudem mei. Summo scribentur has ea, vel ne mollis menandri praesent. An
-                      mel movet insolens.
-
-                      Id qui dicant indoctum. Quo autem qualisque assueverit ex, at solum essent
-                      virtute mea, ei copiosae tacimates mnesarchum vix. Nec an simul theophrastus.
-                      Nam vide saperet eloquentiam ex. Zril deserunt volutpat id usu, laudem
-                      mediocrem eu pro. Per consetetur </p>
+                    <p>
+                    A <a href="https://en.wikipedia.org/wiki/Parameter_(computer_programming)">parameter</a> or argument is a value
+                    that is passed into a function. The function will execute with the parameter "person" or argument.
+                    </p>
 
                       <code>
-                        var x = [1,24,5,7];
+                          function greetSomeone(person){ // parameter
+                              if(person == "martin"){   // condition
+                                  console.log("heyo");
+                              }
+                              else{
+                                  console.log("hi");
+                              }
+                          }
                       </code>
 
                       <!-- **** CONDITIONALS ***** -->
 
                       <h5>What are Conditionals?</h5>
 
-                      <p>orem ipsum dolor sit amet, usu suscipit copiosae no, vis ea habeo
-                        reque. Mea in libris possit animal, molestie conclusionemque eos te, error
-                        melius persequeris duo id. Pro ad copiosae apeirian. Nisl reque in quo,
-                        illud luptatum oporteat at his, nam quand</p>
+                      <p>
+                        So a <a href="https://en.wikipedia.org/wiki/Conditional_(computer_programming)">conditional</a> statement is a set of rules performed if a certain condition is met.
+                      </p>
 
-                        <code> if (myName == "Martin") <br>
+                        <code> if (myName == "Martin") // condition<br>
                           { <br>
                             console.log("Hey there Martin,how's it going?"); <br>
                           } <br>
@@ -151,48 +151,20 @@
                           <!-- **** ARRAYS **** -->
 
                           <h5>Let's talk about Arrays!</h5>
+                          <p>
+                        So an array is a collection of data items that can be selected. Imagine a file cabinet.
+                          Each drawer contains information such as a string, number, even another array(cabinet).
+                          By looking at the code below is an example of an array.
 
-                          <p> quo, illud luptatum oporteat at his, nam quando ullamcorper te.
-                            Tempor volumus invenire nam in, mei quis dicit et. Ius dico autem at,
-                            numquam adversarium concludaturque nam at.
-
-                            Veritus volumus sensibus qui an, has nominavi ponderum efficiantur at.
-                            Mei elitr scripta sententiae no, erat nominati ne sea. Ei vix luptatum
-                            consetetur intellegebat. Vix tacimates tincidunt intellegam ut, quo
-                            graece maluisset intellegat an, cu inani sanctus pro. An oblique
-                            euripidis his, ei aliquam epicuri percipit eum. Ei explicari evertitur
-                            incorrupte nec, denique ocurreret ne nam.
-
-                            An duo malis epicuri consequat, duo timeam temporibus consequuntur an.
-                            Ut tantas scaevola vis. In per propriae concludaturque, quas dicta sea
-                            an, no minim laudem mei. Summo scribentur has ea, vel ne mollis
-                            menandri praesent. An mel movet insolens.
-
-                            Id qui dicant indoctum. Quo autem qualisque assueverit ex, at solum
-                            essent virtute mea, ei copiosae tacimates mnesarchum vix. Nec an simul
-                            theophrastus. Nam vide saperet eloquentiam ex. Zril deserunt volutpat
-                            id usu, laudem mediocrem eu pro. Per consetetur </p>
+                          </p>
 
                             <code> var x = [1,24,5,7]; </code>
 
                             <!-- **** STRINGS **** -->
 
-                            <h5>Arrays? Let's talk about Strings</h5>
-
-                            <p>umus sensibus qui an, has nominavi ponderum efficiantur at. Mei elitr
-                              scripta sententiae no, erat nominati ne sea. Ei vix luptatum consetetur
-                              intellegebat. Vix tacimates tincidunt intellegam ut, quo graece
-                              maluisset intellegat an, cu inani sanctus pro. An oblique euripidis his,
-                              ei aliquam epicuri percipit eum. Ei explicari evertitur incorrupte nec,
-                              denique ocurreret ne nam.
-
-                              An duo malis epicuri consequat, duo timeam temporibus consequuntur an.
-                              Ut tantas scaevola vis. In per propriae concludaturque, quas dicta sea
-                              an, no minim laudem mei. Summo scribentur has ea, vel ne mollis menandri
-                              praesent. An mel movet insolens.
-
-                              Id qui dicant indoctum. Quo autem qualisque assueverit ex, at solum
-                              ess</p>
+                            <h5>Arrays? So what is a Strings</h5>
+                            <p>A <a href="https://en.wikipedia.org/wiki/String_(computer_science)">string</a> is letters, words, characters, symbols and punctuation marks.
+                            </p>
 
                               <code>
                                 var name = "Steve";
@@ -201,24 +173,12 @@
                               <!-- **** CONSOLE.LOG **** -->
 
                               <h5>Now let's print or Console.log</h5>
-
-                              <p> eritus volumus sensibus qui an, has nominavi ponderum
-                                efficiantur at. Mei elitr scripta sententiae no, erat nominati ne
-                                sea. Ei vix luptatum consetetur intellegebat. Vix tacimates
-                                tincidunt intellegam ut, quo graece maluisset intellegat an, cu
-                                inani sanctus pro. An oblique euripidis his, ei aliquam epicuri
-                                percipit eum. Ei explicari evertitur incorrupte nec, denique
-                                ocurreret ne nam.
-
-                                An duo malis epicuri consequat, duo timeam temporibus consequuntur
-                                an. Ut tantas scaevola vis. In per propriae concludaturque, quas
-                                dicta sea an, no minim laudem mei. Summo scribentur has ea, vel ne
-                                mollis menandri praesent. An mel movet insolens.
-
-                                Id qui dicant indoctum. Quo autem qualisque assueverit ex, at
-                                solum essent virtute mea, ei copiosae tacimates mnesarchum vix.
-                                Nec an simul theophrastus. Nam vide saperet eloquentiam ex. Zril
-                                deserunt volutpat id usu </p>
+                              <p>
+                              To print a message, again open a browser and right clicking click on the inspect.
+                              From there copy and paste the code below and the message should show the string
+                              "Hello World". This is a great way to find errors, or a message of how your code
+                              is running. Go ahead and play around with it. Very useful for developers to use.
+                              </p>
 
                                 <code>
                                   var x = "Hello World"; <br>

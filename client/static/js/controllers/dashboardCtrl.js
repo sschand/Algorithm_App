@@ -28,10 +28,12 @@ algorithmApp.controller('dashboardCtrl', function ($scope, algorithmFactory, use
         $scope.bsts = data;
     });
 
+
     $scope.algoUser = function(algo_id, user){
         algorithmFactory.addUser(algo_id, user, function(data){
             console.log(data);
             $scope.current_user = data.user;
+
         });
 
     };
