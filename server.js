@@ -31,7 +31,7 @@ var messages = [];
 var io = require('socket.io').listen(server);
 
 io.sockets.on('connection', function(socket){
-    console.log(socket.id);
+    // console.log(socket.id);
 
     // Listening:
     socket.on('got_new_user', function(data){
