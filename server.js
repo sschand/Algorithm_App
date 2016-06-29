@@ -12,12 +12,12 @@ app.use(express.static(path.join(__dirname, "./client/static")));
 
 require('./server/config/mongoose.js');
 
- var routes_setter = require('./server/config/routes.js');
+var routes_setter = require('./server/config/routes.js');
 
- routes_setter(app);
+routes_setter(app);
 
 var server = app.listen(8001, function() {
-  console.log("listening on port 8001");
+    console.log("listening on port 8001");
 })
 
 /****** variables *****/
@@ -31,35 +31,36 @@ var messages = [];
 var io = require('socket.io').listen(server);
 
 io.sockets.on('connection', function(socket){
-    // console.log(socket.id);
+    console.log('socket id: ',socket.id);
 
     // Listening:
     socket.on('got_new_user', function(data){
+        console.log('new user name: ', data);
         user_count++;
-        users[socket.id] = {user_count: user_count, name: data.name};
-
-        // users[socket.id] = data.name;
-        // users[user_count] = {name: data.name, id: socket.id}
-
-        io.emit('new_user', {name: data.name, uId: socket.id, user_count: user_count});
-        socket.emit('existing_users', {existing_users: users, uID: socket.id});
-        io.emit('new_message_added', {messages: messages});
+        // users[socket.id] = {user_count: user_count, name: data.name};
+        //
+        // // users[socket.id] = data.name;
+        // // users[user_count] = {name: data.name, id: socket.id}
+        //
+        // io.emit('new_user', {name: data.name, uId: socket.id, user_count: user_count});
+        // socket.emit('existing_users', {existing_users: users, uID: socket.id});
+        // io.emit('new_message_added', {messages: messages});
     });
 
     socket.on('new_message', function(data){
+        console.log('new message data: ', data);
         messages.push(data);
-
         socket.emit('message_added');
         io.emit('new_message_added', {messages: messages});
     });
 
-    socket.on("disconnect", function(data){
-        // console.log(socket.id);
-        var sid = socket.id;
-
-        io.emit('disconnect_user', {disconnect_id: socket.id});
-
-    })
+    // socket.on("disconnect", function(data){
+    //     // console.log(socket.id);
+    //     var sid = socket.id;
+    //
+    //     io.emit('disconnect_user', {disconnect_id: socket.id});
+    //
+    // })
     // app.io.route('got_new_user', function(req,res){
     //     app.io.broadcast('new_user', {new_user_name: req.data.name})
     //     req.io.emit('existing_user', users);
