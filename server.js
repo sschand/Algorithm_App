@@ -22,6 +22,7 @@ var server = app.listen(8001, function() {
 
 /****** variables *****/
 var users = {};
+var rooms = ['5774456df6dde4884200aff2', '5772e20bf6dde4884200afee'];
 var user_count = 0;
 var messages = [];
 /****** end vars *****/
@@ -31,38 +32,25 @@ var messages = [];
 var io = require('socket.io').listen(server);
 
 io.sockets.on('connection', function(socket){
-    console.log('socket id: ',socket.id);
+    // console.log( io.sockets.adapter.rooms);
+
+
+    socket.messages = [];
 
     // Listening:
     socket.on('got_new_user', function(data){
-        console.log('new user name: ', data);
+        socket.username = data.name;
+        socket.room = data.room;
+
+        room = data.room;
+        socket.join(data.room);
         user_count++;
-        // users[socket.id] = {user_count: user_count, name: data.name};
-        //
-        // // users[socket.id] = data.name;
-        // // users[user_count] = {name: data.name, id: socket.id}
-        //
-        // io.emit('new_user', {name: data.name, uId: socket.id, user_count: user_count});
-        // socket.emit('existing_users', {existing_users: users, uID: socket.id});
-        // io.emit('new_message_added', {messages: messages});
+
     });
 
     socket.on('new_message', function(data){
-        messages.push(data);
         socket.emit('message_added');
-        io.emit('new_message_added', {messages: messages});
+        io.sockets.in(socket.room).emit('new_message_added', data);
+
     });
-
-    // socket.on("disconnect", function(data){
-    //     // console.log(socket.id);
-    //     var sid = socket.id;
-    //
-    //     io.emit('disconnect_user', {disconnect_id: socket.id});
-    //
-    // })
-    // app.io.route('got_new_user', function(req,res){
-    //     app.io.broadcast('new_user', {new_user_name: req.data.name})
-    //     req.io.emit('existing_user', users);
-    // });
-
 })

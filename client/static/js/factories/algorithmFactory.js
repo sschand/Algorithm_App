@@ -53,5 +53,14 @@ algorithmApp.factory('algorithmFactory', function($http){
         });
     }
 
+    factory.addMessages = function(algo_id, messages, callback){
+        console.log('algo: ', algo_id, 'messages: ', messages);
+
+
+        // $http.post('/algoMessages', )
+        // callback()
+
+    }
+
     return factory;
 })
