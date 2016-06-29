@@ -48,7 +48,6 @@ io.sockets.on('connection', function(socket){
     });
 
     socket.on('new_message', function(data){
-        console.log('new message data: ', data);
         messages.push(data);
         socket.emit('message_added');
         io.emit('new_message_added', {messages: messages});
