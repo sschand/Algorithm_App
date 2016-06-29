@@ -60,24 +60,52 @@ module.exports = (function(){
                 if(err){
                     console.log('error occured');
                 }else {
-                    result.users.push(req.body.user);
-                    result.save();
-                    User.findOne({_id: req.body.user._id}, function(err, user){
-                        if(err){
-                            console.log('error occured');
-                        }else {
-                            user.algorithms.push(req.body.id);
-                            user.save();
-                            res.json({user: user});
+
+                    console.log('////////result/////////');
+                    console.log(req.body);
+                    console.log('/////////////////');
+                    if(result.users.length == 0){
+                        result.users.push(req.body.user);
+                        result.save();
+                    } else {
+                        for (var i of result.users){
+                            if(i._id == req.body.user._id){
+                                console.log('existed');
+                            } else {
+                                result.users.push(req.body.user);
+                                result.save();
+                            }
+
                         }
-                    });
+                        User.findOne({_id: req.body.user._id}, function(err, user){
+                            if(err){
+                                console.log('error occured');
+                            }else {
+                                if(user.algorithms.length == 0){
+                                    user.algorithms.push(req.body.id);
+                                    user.save();
+                                    res.json({user: user});
+                                } else {
+                                    for(var j of user.algorithms){
+                                        if(j == req.body.id){
+                                            console.log('algorithm existed');
+                                        } else {
+                                            user.algorithms.push(req.body.id);
+                                            user.save();
+                                            res.json({user: user});
+                                        }
+                                    }
+                                }
+
+
+                            }
+                        });
+                    }
+
                 }
             });
 
         }
-
-
-
 
 
     }

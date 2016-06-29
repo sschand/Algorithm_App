@@ -27,7 +27,7 @@ html, body {
    padding-left:30px;
    height: 700px;
    overflow: scroll;
-   border-left:1px solid rgba(240,109,113,0.3)
+   border-left:1px solid rgba(240,109,113,0.3);
 }
 
 .left-col {
@@ -40,4 +40,14 @@ html, body {
    transform-style: preserve-3d;
    display: block;
    background-color: #fff;
+}
+
+.chat{
+    margin-bottom:25px;
+
+}
+
+.custom{
+    margin-left: 10px;
+    
 }

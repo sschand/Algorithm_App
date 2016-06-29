@@ -7,8 +7,6 @@ algorithmApp.controller('dashboardCtrl', function ($scope, algorithmFactory, use
     $scope.current_user = userFactory.getUser();
 
 
-
-
     ////////////////////////////////////////////////////////
     //        getting algorithms from DB                  //
     ////////////////////////////////////////////////////////
@@ -30,10 +28,9 @@ algorithmApp.controller('dashboardCtrl', function ($scope, algorithmFactory, use
 
 
     $scope.algoUser = function(algo_id, user){
+        console.log($scope.current_algo);
         algorithmFactory.addUser(algo_id, user, function(data){
-            console.log(data);
             $scope.current_user = data.user;
-
         });
 
     };

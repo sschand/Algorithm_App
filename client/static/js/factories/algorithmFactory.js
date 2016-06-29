@@ -1,11 +1,11 @@
-algorithmApp.factory('algorithmFactory', function($http){
+algorithmApp.factory('algorithmFactory', function($http, $localStorage, $sessionStorage){
     var arrays =[];
     var strings =[];
     var slls =[];
     var bsts =[];
 
     var factory = {};
-    var current_algo;
+    var current_algo = [];
 
     factory.getArray = function(callback){
         $http.get('/array').success(function(result){
@@ -44,11 +44,22 @@ algorithmApp.factory('algorithmFactory', function($http){
         });
     }
 
+
     factory.addUser = function(algo_id, user, callback){
+        console.log('////////////user/////////');
+        console.log(user);
+        console.log();
+        // for(var i of current_algo.user){
+        //     // if( i == user._id ){
+        //     //     console.log('exited');
+        //     // }
+        // }
         var info = {id: algo_id, user: user};
 
         $http.post('/algoUser', info).success(function(result){
             current_algo = result;
+            console.log('//////////////////current user/////////');
+            console.log(current_algo.user.algorithms);
             callback(result);
         });
     }
