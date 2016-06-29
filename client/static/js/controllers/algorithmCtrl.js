@@ -3,6 +3,7 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
     $scope.users = [];
     $scope.current_algo;
     $scope.messages;
+    $scope.current_algo;
 
     // $scope.users = [];
     $scope.current_user = userFactory.getUser();
@@ -13,7 +14,6 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
     // Get current algorithm
     algorithmFactory.getCurrentAlgo($scope.algo_id, function(data){
         $scope.current_algo = data;
-
     });
 
 
@@ -85,7 +85,7 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
 
             socket.on("new_message_added", function(data){
 
-                console.log('messages: ', data);
+                //console.log('messages: ', data);
                 $scope.messages = data;
 
                 // $(".chat").html('');

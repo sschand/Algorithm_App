@@ -37,13 +37,16 @@
 
                 <div class="chat_room">
                     <P>Ready..set...conversate!</P>
-                    <div class="container">
-                        <div class="chat ">
-                            <!-- <p ng-repeat="message in messages">
-                                {{message}}
 
-                            </p> -->
-                        </div>
+                        <div class="chat ">
+                            <div ng-repeat="message in messages.messages">
+                                <p >&#9786; {{message.name}}:</p>
+
+                                     <p class="custom">
+                                         &#x268A; {{message.message}}
+                                     </p>
+                                     <hr>
+                            </div>
                     </div>
                 </div>
 
