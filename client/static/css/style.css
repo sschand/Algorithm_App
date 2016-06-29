@@ -23,8 +23,9 @@ html, body {
 }
 
 .right-col {
-    padding-left:30px;
-   height: 100%;
+    width:25%;
+   padding-left:30px;
+   height: 700px;
    overflow: scroll;
 }
 
@@ -38,9 +39,4 @@ html, body {
    transform-style: preserve-3d;
    display: block;
    background-color: #fff;
-}
-
-
-.hide {
-   display: none;
 }
