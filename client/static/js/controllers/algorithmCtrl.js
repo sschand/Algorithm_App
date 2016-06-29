@@ -80,22 +80,9 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
             //     socket.emit("new_message", {userID: userID, name: name, message: message});
             // });
 
-            socket.on("message_added", function(){
+            
 
-                // $("#message").val('');
-                $scope.message = {};
-            });
 
-            socket.on("new_message_added", function(data){
-
-                //console.log('messages: ', data);
-                $scope.messages = data;
-
-                // $(".chat").html('');
-                // for (var message in data.messages){
-                //     $(".chat").append('<div class="row"><div class="two columns">'+ data.messages[message].name +': </div><div class="ten columns">'+data.messages[message].message+'</div></div>');
-                // }
-            });
 
             // socket.on("disconnect_user", function(data){
             //
@@ -107,7 +94,7 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
 
 
         socket.emit("got_new_user", {name: $scope.current_user[0].name, room: room});
-    
+
 
 
     // $scope.joinRoom = function(){
