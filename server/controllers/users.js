@@ -46,6 +46,7 @@ module.exports = (function(){
                       console.log('user uisssssssss: ',user);
                   }
               }
+              user.save();
 
           }
       })
