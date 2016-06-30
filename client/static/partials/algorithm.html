@@ -39,8 +39,8 @@
                     <P>Ready..set...conversate!</P>
 
                     <p>
-                        <!-- {{messages}}
-                        {{messages[0]}}
+                         {{messages}}
+                        <!-- {{messages[0]}}
                         {{messages[1]}}
                         {{num}} -->
                     </p>
@@ -49,8 +49,8 @@
 
                         <div class="chat ">
 
-                            <div ng-repeat="i in getNumber(num)">
-                                {{ messages[i].name }}
+                            <div ng-repeat="i in getNumber(num) track by $index">
+                                {{ messages[i] }}
                                 <!-- <div ng-repeat="">
 
                                 </div> -->
