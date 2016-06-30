@@ -2,9 +2,13 @@
 algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, userFactory, $routeParams, socket) {
     $scope.users = [];
     $scope.current_algo;
-
+    $scope.num;
     $scope.messages = [];
     var room;
+
+    $scope.getNumber = function(num) {
+        return new Array(num);
+    }
 
     // $scope.users = [];
     $scope.current_user = userFactory.getUser();
@@ -40,11 +44,18 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
     };
 
     socket.on("message_added", function(){
+        console.log('current messages: ', $scope.messages);
         $scope.message = {};
     });
 
     socket.on("new_message_added", function(data){
-        $scope.messages.push(data);
+            console.log('senTT message', data);
+        if(data.room == room){
+            $scope.messages.push(data);
+            $scope.num = $scope.messages.length;
+        }
+        $scope.message = {};
+
 
         // add messages to algo db
         //  algorithmFactory.addMessages($scope.algo_id, $scope.messages, function(data){
