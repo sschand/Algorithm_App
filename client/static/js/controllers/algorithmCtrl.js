@@ -35,7 +35,6 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
     };
 
     socket.on("message_added", function(){
-        console.log('current messages: ', $scope.messages);
         $scope.message = {};
     });
 

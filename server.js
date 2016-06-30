@@ -23,7 +23,8 @@ var server = app.listen(8001, function() {
 /****** variables *****/
 var users = {};
 
-var rooms = ['5774456df6dde4884200aff2', '5772e20bf6dde4884200afee', '5774581af6dde4884200aff4', '57745838f6dde4884200aff5', '5774631ff6dde4884200aff8', '57746339f6dde4884200aff9'];
+var rooms = ['5774456df6dde4884200aff2', '5772e20bf6dde4884200afee', '5774581af6dde4884200aff4', '57745838f6dde4884200aff5', '5774631ff6dde4884200aff8', '57746339f6dde4884200aff9', '577454afe1d69d4762783f6d'];
+
 
 var user_count = 0;
 var messages = [];
@@ -35,8 +36,6 @@ var io = require('socket.io').listen(server);
 
 io.sockets.on('connection', function(socket){
     // console.log( io.sockets.adapter.rooms);
-
-
     socket.messages = [];
 
     // Listening:
@@ -51,8 +50,6 @@ io.sockets.on('connection', function(socket){
     });
 
     socket.on('new_message', function(data){
-
-            console.log('in server new message');
         // socket.emit('message_added', data);
         io.sockets.in(socket.room).emit('new_message_added', data);
 
