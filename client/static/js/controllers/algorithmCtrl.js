@@ -41,7 +41,9 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
     socket.on("new_message_added", function(data){
             console.log('senTT message', data);
         if(data.room == room){
+            console.log(data);
             $scope.messages.push(data);
+            console.log($scope.messages);
             $scope.num = $scope.messages.length;
         }
         $scope.message = {};

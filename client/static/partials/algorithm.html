@@ -49,17 +49,11 @@
 
                         <div class="chat ">
 
-                            <div ng-repeat="i in getNumber(num) track by $index">
-                                {{ messages[i] }}
-                                <!-- <div ng-repeat="">
-
-                                </div> -->
-                                {{messages[i]}}
-                                <!-- <p >&#9786; {{message.name}}:</p>
-
+                            <div ng-repeat="message in messages">
+                                <p >&#9786; {{message.name}}:</p>
                                      <p class="custom">
                                          &#x268A; {{message.message}}
-                                     </p> -->
+                                     </p>
                                      <hr>
                             </div>
                     </div>
