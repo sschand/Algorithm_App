@@ -22,7 +22,11 @@ var server = app.listen(8001, function() {
 
 /****** variables *****/
 var users = {};
+<<<<<<< HEAD
 var rooms = ['5774456df6dde4884200aff2', '5772e20bf6dde4884200afee', '5774581af6dde4884200aff4', '57745838f6dde4884200aff5', '5774631ff6dde4884200aff8', '57746339f6dde4884200aff9'];
+=======
+var rooms = ['5774456df6dde4884200aff2', '5772e20bf6dde4884200afee','577454afe1d69d4762783f6d'];
+>>>>>>> 3ef4f9a36424bb1424bf5f41db1652947c509666
 var user_count = 0;
 var messages = [];
 /****** end vars *****/

@@ -26,15 +26,6 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
     // New user entered algo
     socket.emit("got_new_user", {name: $scope.current_user[0].name});
 
-            // socket.on("disconnect_user", function(data){
-            //
-            //     var id = JSON.stringify(data.disconnect_id);
-            //     var id2 = id.slice(3,-1);
-            //
-            //     $("."+id2+"").css('color', '#888').css('font-style', 'italic');
-            // });
-
-
 
     // User sends new message
     $scope.sendMessage = function(user_name){
