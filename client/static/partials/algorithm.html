@@ -22,9 +22,9 @@
                     <form class="col s12">
                         <div class="row">
                             <div class="input-field col s12">
-                                <textarea id="textarea1" class="materialize-textarea" g-model="newSolution.solution"></textarea>
+                                <textarea id="textarea1" class="materialize-textarea" ng-model="newSolution.solution"></textarea>
                                 <label for="textarea1">Your Solution</label>
-                                <button class="waves-effect waves-light btn red" type="submit" name="button" ng-click="check()">Check</button>
+                                <button class="waves-effect waves-light btn red" type="submit" name="button" ng-click="check(current_algo._id, current_user[0]._id)">Check</button>
                             </div>
                         </div>
                     </form>

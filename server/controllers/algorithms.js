@@ -60,10 +60,6 @@ module.exports = (function(){
                 if(err){
                     console.log('error occured');
                 }else {
-
-                    console.log('////////result/////////');
-                    console.log(req.body);
-                    console.log('/////////////////');
                     if(result.users.length == 0){
                         result.users.push(req.body.user);
                         result.save();
@@ -96,12 +92,9 @@ module.exports = (function(){
                                         }
                                     }
                                 }
-
-
                             }
                         });
                     }
-
                 }
             });
 

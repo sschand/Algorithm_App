@@ -37,4 +37,8 @@ module.exports= function(app){
     app.post('/algoUser', function(req, res){
         algorithms.addUser(req, res);
     });
+
+    app.post('/check', function(req,res){
+       users.checkalgo(req,res);
+      });
 }

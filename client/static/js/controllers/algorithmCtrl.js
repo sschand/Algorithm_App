@@ -10,6 +10,13 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
         return new Array(num);
     }
 
+    $scope.check = function(algo_id,user_id){
+        var info = {algo_id: algo_id, solution: $scope.newSolution.solution, user_id: user_id}
+        algorithmFactory.check(info, function(data){
+            console.log(data);
+        })
+    }
+
     // $scope.users = [];
     $scope.current_user = userFactory.getUser();
     // $scope.users.push($scope.current_user);

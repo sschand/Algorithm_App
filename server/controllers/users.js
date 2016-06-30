@@ -16,7 +16,7 @@ module.exports = (function(){
         }
       })
     },
-    
+
     // Get User
     getUser: function(req, res){
       User.find({email: req.body.email, password: req.body.password}, function(err,result){
@@ -30,6 +30,25 @@ module.exports = (function(){
           }
         }
       });
-    }
+  },
+
+  checkalgo: function(req,res){
+      console.log('algo is: ', req.body);
+      User.findOne({_id: req.body.user_id}, function(err, user){
+          if(err){
+              console.log('something went wrong');
+          } else {
+              console.log(user);
+              for(var i in user.algorithms){
+                  if(user.algorithms[i] == req.body.algo_id){
+                      user.algorithms[i] = {algo_id: req.body.algo_id, solution: req.body.solution};
+                      user.save();
+                      console.log('user uisssssssss: ',user);
+                  }
+              }
+
+          }
+      })
+  }
   }
 })();

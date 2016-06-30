@@ -73,5 +73,12 @@ algorithmApp.factory('algorithmFactory', function($http, $localStorage, $session
 
     }
 
+    factory.check = function(info){
+        console.log('info is: ', info);
+        $http.post('/check', info).success(function(output,callback){
+            callback(output);
+        })
+    }
+
     return factory;
 })
