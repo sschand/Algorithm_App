@@ -24,14 +24,11 @@
                 <div class="row">
                     <form class="col s12">
                         <div class="row">
-                            <div class="input-field col s12">
+                            <div class="input-field col s6">
                                 <input id="name" type="text" class="validate" ng-model="newUser.name">
                                 <label for="name">Name</label>
                             </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="input-field col s12">
+                            <div class="input-field col s6">
                                 <input id="email" type="email" class="validate" ng-model="newUser.email">
                                 <label for="email">Email</label>
                             </div>
@@ -51,13 +48,13 @@
                                 <input id="c_password" type="password" class="validate" ng-model="newUser.c_password">
                                 <label for="c_password">Confirm Password</label>
                             </div>
+
                         </div>
+                        <a class="modal-action waves-effect waves-green btn-flat btn black text-center" ng-click="registerUser()">Register</a>
                     </form>
                 </div>
             </div>
-            <div class="modal-footer">
-                <a class="modal-action waves-effect waves-green btn-flat" ng-click="registerUser()">Register</a>
-            </div>
+
         </div>
 
         <!-- Modal Structure -->
@@ -82,11 +79,9 @@
                                 <label for="password">Password</label>
                             </div>
                         </div>
+                        <a class="modal-action waves-effect waves-green btn-flat btn black" ng-click="loginUser()">Login</a>
                     </form>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <a class="modal-action waves-effect waves-green btn-flat" ng-click="loginUser()">Login</a>
             </div>
         </div>
 
