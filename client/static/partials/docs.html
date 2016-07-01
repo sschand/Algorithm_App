@@ -1,283 +1,286 @@
 <nav>
-  <div class="nav-wrapper"> <a class="brand-logo">Algorithm App</a> <ul
-    id="nav-mobile" class="right hide-on-med-and-down"> <li class="active"><a
-      href="#docs">Docs</a></li> <li><a href="#dashboard">Dashboard</a></li> <li><a
-        href="#profile">Profile</a></li> <li><a href="#home">Logout</a></li> </ul>
-  </div>
+    <div class="nav-wrapper">
+        <a class="brand-logo"><i class="fa fa-hashtag" aria-hidden="true"></i>AlgorithmApp</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active"><a href="#docs">Docs</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#home">Logout</a></li>
+        </ul>
+    </div>
 </nav>
-    <div class="container">
+<div class="container">
 
-      <h1>Basic Algorithms</h1>
+    <h1>Basic Algorithms</h1>
 
-      <!-- *** ALGORITHMS **** -->
+    <!-- *** ALGORITHMS **** -->
 
-      <h5>What are Algorithms?</h5>
+    <h5>What are Algorithms?</h5>
 
-      <p>So what is an algorithm? An <a target="_blank" href="http://bit.ly/1ud1l98">algorithm</a> are a set of instructions or rules specifiying how to solve some problems. For example,
+    <p>So what is an algorithm? An <a target="_blank" href="http://bit.ly/1ud1l98">algorithm</a> are a set of instructions or rules specifiying how to solve some problems. For example,
         you're baking a cake. In order for the cake to taste like cake we need to follow the ingredients.
         If we don't follow the ingredients then the cake might not taste like a cake. It might give you a weird taste.
         Algorithms are like ingredients to follow. In order for the computer to do it's job it needs to follow instructions.
         And that is where we come in as software engineers. We provide the instructions, or ingredient in order for the
         computer to do its job. When the computer reads our code. It reads line by line until the end of it. Below is an example of
         an algorithm.
-        </p>
+    </p>
 
-      <ul class="collapsible" data-collapsible="expandable">
-          <li>
-              <div class="collapsible-header">Algorithm Code</div>
-        <div class="collapsible-body">
-        <code> function sum_even(){ <br>
-          var sum = 0;<br>
-          for(var i = 1; i < 100; i++){<br>
-          if(i % 2 === 0)<br>
-          sum = sum + i;<br>
-          console.log(sum);<br>
-          }<br>
-        </code>
-    </div>
-</li>
-     </ul>
-          <!-- **** FUNCTION ***** -->
-
-          <h5>Okay, so what's a function?</h5>
-
-          <p>A <a target="_blank" href="http://www.mathopenref.com/functionsprog.html">function</a> is a block of code, a set of intructions implementing in an algorithm. So when you call a function,
-            the function will run. For example, let's look at the example below. Open up your browser and right click on
-            the page and click inspect. Another shortcut to take if you have a mac is by holding
-            down command and the option button then by pressing the I button, inspect element will pop up.
-            If you have a window, well that just sucks cos I don't have a window. So figure it out or google it.
-            Back to those who have a mac, copy and paste it onto the console and watch it give the output "James".
-            So when we call the printMyName(), we won't have to rewrite the block of code again.
-            </p>
-            <ul class="collapsible" data-collapsible="expandable">
-                <li>
-                    <div class="collapsible-header">Algorithm Code</div>
-              <div class="collapsible-body">
-            <code> function printMyName() <br>
-              { <br>
-              console.log("James"); <br>
-              } <br>
-            </code>
-        </div>
-    </li>
-</ul>
-
-            <!-- **** VARIABLES **** -->
-
-              <h5>What's a Variable?</h5>
-
-              <p>Let's say we have three bags and three items. One is a book, another is a watch and last, is a phone.
-                We store the first item, which is a book and put it in the bag and label the bag. We do the same with
-                the watch and phone and label the bag. If we have more to store we need more containers. We then close the
-                bag. From this example, this is essentially what a variable does. A variable is a stored information that
-                we can refer or manipulate. it can store a string, an array or an object. By looking back at the code below
-                we set animal to equal to tiger, meaning we assigned the value to the variable.
-              </p>
-              <ul class="collapsible" data-collapsible="expandable">
-                  <li>
-                      <div class="collapsible-header">Algorithm Code</div>
-                <div class="collapsible-body">
-                <code>
-                  var animal = "Tiger"
+    <ul class="collapsible" data-collapsible="expandable">
+        <li>
+            <div class="collapsible-header">Algorithm Code</div>
+            <div class="collapsible-body">
+                <code> function sum_even(){ <br>
+                    var sum = 0;<br>
+                    for(var i = 1; i < 100; i++){<br>
+                        if(i % 2 === 0)<br>
+                        sum = sum + i;<br>
+                        console.log(sum);<br>
+                    }<br>
                 </code>
             </div>
         </li>
     </ul>
-                  <!-- **** LOOPS **** -->
+    <!-- **** FUNCTION ***** -->
 
-                  <h5>Okay, Let's talk about Loops!</h5>
+    <h5>Okay, so what's a function?</h5>
 
-                  <p>Wouldn't it be great to add code in and tell it to do this task repeatly, but only
-                    say it once? This is where loops comes in. In the code provided below is an example of
-                    a for loop. It says, var i is set to 0, and if 0 is less than to 234, the increment + 1.
-                    That means this <i>FOR</i> loop will continue to run until it is greater or equal to 234.
-                    There are a few different types of loops. The most common are <i>FOR</i> loops and <i>WHILE</i> loops.
-                    A <i>FOR</i> loop is executed when you know exactly how many times your code should run. A <i>WHILE</i>
-                    loop is combination of loops with conditionals. It's good to use when you don't know how many times the line
-                    of code will be running. Another great use to <i>break</i> out of these loops is adding <i>break</i> it's self and
-                    exit the loop. If you add <i>continue</i> onto your code, the continue statment will run the code and
-                    and iterate again.
-                  </p>
-                  <ul class="collapsible" data-collapsible="expandable">
-                      <li>
-                          <div class="collapsible-header">Algorithm Break Code</div>
-                    <div class="collapsible-body">
-                    <code>
-                        Break:  <br>
-                        for(var i = 0; i < 10; i++) { <br>
-                        } <br>
-                        if (i === 3) { <br>
-                        } <br>
-                        break;  <br>
-                        text += "the number is " + i + "<br>";
-                    </code>
-                </div>
-            </li>
-            </ul>
-
-                    <ul class="collapsible" data-collapsible="expandable">
-                        <li>
-                            <div class="collapsible-header">Algorithm Continue Code</div>
-                      <div class="collapsible-body">
-                    <code>
-                        Continue:   <br>
-                        for(i = 0;i < 10; i++) {    <br>
-                            if(i ===3) {    <br>
-                                continue    <br>
-                            }   <br>
-                            text += "the number is" + i + "<br>";
-                        }
-                    </code>
-                </div>
-            </ul>
+    <p>A <a target="_blank" href="http://www.mathopenref.com/functionsprog.html">function</a> is a block of code, a set of intructions implementing in an algorithm. So when you call a function,
+        the function will run. For example, let's look at the example below. Open up your browser and right click on
+        the page and click inspect. Another shortcut to take if you have a mac is by holding
+        down command and the option button then by pressing the I button, inspect element will pop up.
+        If you have a window, well that just sucks cos I don't have a window. So figure it out or google it.
+        Back to those who have a mac, copy and paste it onto the console and watch it give the output "James".
+        So when we call the printMyName(), we won't have to rewrite the block of code again.
+    </p>
+    <ul class="collapsible" data-collapsible="expandable">
+        <li>
+            <div class="collapsible-header">Algorithm Code</div>
+            <div class="collapsible-body">
+                <code> function printMyName() <br>
+                    { <br>
+                        console.log("James"); <br>
+                    } <br>
+                </code>
+            </div>
         </li>
-                    <ul class="collapsible" data-collapsible="expandable">
-                        <li>
-                            <div class="collapsible-header">Algorithm Loop Code</div>
-                      <div class="collapsible-body">
-                    <code>
-                      function array_loop(); <br>
-                      var x = []; <br>
-                      for(var i=0; i< 234; i++);  <br>
-                      x.push(i);  <br>
-                      } <br>
-                      console.log(x); <br>
-                      } <br>
-                    </code>
-                </div>
-            </li>
-            </ul>
-                    <!-- ***** PARAMETERS ***** -->
+    </ul>
 
-                    <h5>Hmm...Parameters?</h5>
+    <!-- **** VARIABLES **** -->
 
-                    <p>
-                    A <a target="_blank" href="https://en.wikipedia.org/wiki/Parameter_(computer_programming)">parameter</a> or argument is a value
-                    that is passed into a function. The function will execute with the parameter "person" or argument.
-                    </p>
-                    <ul class="collapsible" data-collapsible="expandable">
-                        <li>
-                            <div class="collapsible-header">Algorithm Code</div>
-                      <div class="collapsible-body">
-                      <code>
-                          function greetSomeone(person){ // parameter <br>
-                              if(person == "martin"){   // condition    <br>
-                                  console.log("heyo");  <br>
-                              } <br>
-                              else{ <br>
-                                  console.log("hi");    <br>
-                              } <br>
-                          } <br>
-                      </code>
-                  </div>
-              </ul>
-          </li>
+    <h5>What's a Variable?</h5>
 
-                      <!-- **** CONDITIONALS ***** -->
+    <p>Let's say we have three bags and three items. One is a book, another is a watch and last, is a phone.
+        We store the first item, which is a book and put it in the bag and label the bag. We do the same with
+        the watch and phone and label the bag. If we have more to store we need more containers. We then close the
+        bag. From this example, this is essentially what a variable does. A variable is a stored information that
+        we can refer or manipulate. it can store a string, an array or an object. By looking back at the code below
+        we set animal to equal to tiger, meaning we assigned the value to the variable.
+    </p>
+    <ul class="collapsible" data-collapsible="expandable">
+        <li>
+            <div class="collapsible-header">Algorithm Code</div>
+            <div class="collapsible-body">
+                <code>
+                    var animal = "Tiger"
+                </code>
+            </div>
+        </li>
+    </ul>
+    <!-- **** LOOPS **** -->
 
-                      <h5>What are Conditionals?</h5>
+    <h5>Okay, Let's talk about Loops!</h5>
 
-                      <p>
-                        A <a target="_blank" href="https://en.wikipedia.org/wiki/Conditional_(computer_programming)">conditional</a> statement is a set of rules performed if a certain condition is met.
-                      </p>
-                      <ul class="collapsible" data-collapsible="expandable">
-                          <li>
-                              <div class="collapsible-header">Algorithm Code</div>
-                        <div class="collapsible-body">
-                        <code> if (myName == "Martin") // condition<br>
-                          { <br>
-                            console.log("Hey there Martin,how's it going?"); <br>
-                          } <br>
-                          else  <br>
-                          { <br>
-                          console.log("Greetings Earthling. Have a great day!"); <br>
-                          } <br>
-                        </code>
-                    </div>
-                </ul>
-            </li>
-                          <!-- **** ARRAYS **** -->
+    <p>Wouldn't it be great to add code in and tell it to do this task repeatly, but only
+        say it once? This is where loops comes in. In the code provided below is an example of
+        a for loop. It says, var i is set to 0, and if 0 is less than to 234, the increment + 1.
+        That means this <i>FOR</i> loop will continue to run until it is greater or equal to 234.
+        There are a few different types of loops. The most common are <i>FOR</i> loops and <i>WHILE</i> loops.
+        A <i>FOR</i> loop is executed when you know exactly how many times your code should run. A <i>WHILE</i>
+        loop is combination of loops with conditionals. It's good to use when you don't know how many times the line
+        of code will be running. Another great use to <i>break</i> out of these loops is adding <i>break</i> it's self and
+        exit the loop. If you add <i>continue</i> onto your code, the continue statment will run the code and
+        and iterate again.
+    </p>
+    <ul class="collapsible" data-collapsible="expandable">
+        <li>
+            <div class="collapsible-header">Algorithm Break Code</div>
+            <div class="collapsible-body">
+                <code>
+                    Break:  <br>
+                    for(var i = 0; i < 10; i++) { <br>
+                    } <br>
+                    if (i === 3) { <br>
+                    } <br>
+                    break;  <br>
+                    text += "the number is " + i + "<br>";
+                </code>
+            </div>
+        </li>
+    </ul>
 
-                          <h5>Let's talk about Arrays!</h5>
-                          <p>
-                        An array is a collection of data items that can be selected. Imagine a file cabinet.
-                          Each drawer contains information such as a string, number, even another array(cabinet).
-                          By looking at the code below is an example of an array.
+    <ul class="collapsible" data-collapsible="expandable">
+        <li>
+            <div class="collapsible-header">Algorithm Continue Code</div>
+            <div class="collapsible-body">
+                <code>
+                    Continue:   <br>
+                    for(i = 0;i < 10; i++) {    <br>
+                        if(i ===3) {    <br>
+                            continue    <br>
+                        }   <br>
+                        text += "the number is" + i + "<br>";
+                    }
+                </code>
+            </div>
+        </ul>
+    </li>
+    <ul class="collapsible" data-collapsible="expandable">
+        <li>
+            <div class="collapsible-header">Algorithm Loop Code</div>
+            <div class="collapsible-body">
+                <code>
+                    function array_loop(); <br>
+                    var x = []; <br>
+                    for(var i=0; i< 234; i++);  <br>
+                    x.push(i);  <br>
+                } <br>
+                console.log(x); <br>
+            } <br>
+        </code>
+    </div>
+</li>
+</ul>
+<!-- ***** PARAMETERS ***** -->
 
-                          </p>
+<h5>Hmm...Parameters?</h5>
 
-                          <ul class="collapsible" data-collapsible="expandable">
-                              <li>
-                                  <div class="collapsible-header">Algorithm Code</div>
-                            <div class="collapsible-body">
+<p>
+    A <a target="_blank" href="https://en.wikipedia.org/wiki/Parameter_(computer_programming)">parameter</a> or argument is a value
+    that is passed into a function. The function will execute with the parameter "person" or argument.
+</p>
+<ul class="collapsible" data-collapsible="expandable">
+    <li>
+        <div class="collapsible-header">Algorithm Code</div>
+        <div class="collapsible-body">
+            <code>
+                function greetSomeone(person){ // parameter <br>
+                    if(person == "martin"){   // condition    <br>
+                        console.log("heyo");  <br>
+                    } <br>
+                    else{ <br>
+                        console.log("hi");    <br>
+                    } <br>
+                } <br>
+            </code>
+        </div>
+    </ul>
+</li>
 
-                            <code>
-                                var x = [1,24,5,7];
-                            </code>
-                        </div>
-                    </ul>
-                </li>
+<!-- **** CONDITIONALS ***** -->
 
-                            <!-- **** STRINGS **** -->
+<h5>What are Conditionals?</h5>
 
-                            <h5>Arrays? So what is a Strings</h5>
-                            <p>A <a target="_blank" href="https://en.wikipedia.org/wiki/String_(computer_science)">string</a> is letters, words, characters, symbols and punctuation marks.
-                            </p>
+<p>
+    A <a target="_blank" href="https://en.wikipedia.org/wiki/Conditional_(computer_programming)">conditional</a> statement is a set of rules performed if a certain condition is met.
+</p>
+<ul class="collapsible" data-collapsible="expandable">
+    <li>
+        <div class="collapsible-header">Algorithm Code</div>
+        <div class="collapsible-body">
+            <code> if (myName == "Martin") // condition<br>
+                { <br>
+                    console.log("Hey there Martin,how's it going?"); <br>
+                } <br>
+                else  <br>
+                { <br>
+                    console.log("Greetings Earthling. Have a great day!"); <br>
+                } <br>
+            </code>
+        </div>
+    </ul>
+</li>
+<!-- **** ARRAYS **** -->
 
-                            <ul class="collapsible" data-collapsible="expandable">
-                                <li>
-                                    <div class="collapsible-header">Algorithm Code</div>
-                              <div class="collapsible-body">
+<h5>Let's talk about Arrays!</h5>
+<p>
+    An array is a collection of data items that can be selected. Imagine a file cabinet.
+    Each drawer contains information such as a string, number, even another array(cabinet).
+    By looking at the code below is an example of an array.
 
-                              <code>
-                                var name = "Steve";
-                              </code>
-                          </div>
-                      </ul>
-                  </li>
+</p>
 
-                              <!-- **** CONSOLE.LOG **** -->
+<ul class="collapsible" data-collapsible="expandable">
+    <li>
+        <div class="collapsible-header">Algorithm Code</div>
+        <div class="collapsible-body">
 
-                              <h5>Now let's print or Console.log</h5>
-                              <p>
-                              To print a message, again open a browser and right clicking click on the inspect.
-                              From there copy and paste the code below and the message should show the string
-                              "Hello World". This is a great way to find errors, or a message of how your code
-                              is running. Go ahead and play around with it. Very useful for developers to use.
-                              </p>
-                              <ul class="collapsible" data-collapsible="expandable">
-                                  <li>
-                                      <div class="collapsible-header">Algorithm Code</div>
-                                <div class="collapsible-body">
+            <code>
+                var x = [1,24,5,7];
+            </code>
+        </div>
+    </ul>
+</li>
 
-                                <code>
-                                  var x = "Hello World"; <br>
-                                  Console.log(x);
-                                </code>
-                            </div>
-                        </ul>
-                    </li>
-                                <!-- **** COMMENTS **** -->
+<!-- **** STRINGS **** -->
 
-                                <h5>Comments</h5>
+<h5>Arrays? So what is a Strings</h5>
+<p>A <a target="_blank" href="https://en.wikipedia.org/wiki/String_(computer_science)">string</a> is letters, words, characters, symbols and punctuation marks.
+</p>
 
-                                <p>Comments are a wonderful thing to have. They are like side notes to your code. You can use
-                                comments for self reminders or what this certain block of code is doing. It will not interfere with your
-                                code. To comment highlight the code and if you have a mac go ahead and press command and /.
-                                Another way is using // or /* ... */. Below is an example.</p>
-                                <ul class="collapsible" data-collapsible="expandable">
-                                    <li>
-                                        <div class="collapsible-header">Algorithm Code</div>
-                                  <div class="collapsible-body">
-                                  <code> function greetSomeone(person) {  <br>
-                                    if (person == "Martin")        // Check whether the person is Martin  <br>
-                                    { console.log("Hey there);  <br>
-                                  } else {  <br>
-                                    console.log("Greetings Earthling!");  //print String  <br>
-                                  } <br>
-                                } <br>
-                                    </code>
-                                  </div>
-                              </ul>
-                          </li>
-                      </div>
+<ul class="collapsible" data-collapsible="expandable">
+    <li>
+        <div class="collapsible-header">Algorithm Code</div>
+        <div class="collapsible-body">
+
+            <code>
+                var name = "Steve";
+            </code>
+        </div>
+    </ul>
+</li>
+
+<!-- **** CONSOLE.LOG **** -->
+
+<h5>Now let's print or Console.log</h5>
+<p>
+    To print a message, again open a browser and right clicking click on the inspect.
+    From there copy and paste the code below and the message should show the string
+    "Hello World". This is a great way to find errors, or a message of how your code
+    is running. Go ahead and play around with it. Very useful for developers to use.
+</p>
+<ul class="collapsible" data-collapsible="expandable">
+    <li>
+        <div class="collapsible-header">Algorithm Code</div>
+        <div class="collapsible-body">
+
+            <code>
+                var x = "Hello World"; <br>
+                Console.log(x);
+            </code>
+        </div>
+    </ul>
+</li>
+<!-- **** COMMENTS **** -->
+
+<h5>Comments</h5>
+
+<p>Comments are a wonderful thing to have. They are like side notes to your code. You can use
+    comments for self reminders or what this certain block of code is doing. It will not interfere with your
+    code. To comment highlight the code and if you have a mac go ahead and press command and /.
+    Another way is using // or /* ... */. Below is an example.</p>
+    <ul class="collapsible" data-collapsible="expandable">
+        <li>
+            <div class="collapsible-header">Algorithm Code</div>
+            <div class="collapsible-body">
+                <code> function greetSomeone(person) {  <br>
+                    if (person == "Martin")        // Check whether the person is Martin  <br>
+                    { console.log("Hey there);  <br>
+                } else {  <br>
+                    console.log("Greetings Earthling!");  //print String  <br>
+                } <br>
+            } <br>
+        </code>
+    </div>
+</ul>
+</li>
+</div>
