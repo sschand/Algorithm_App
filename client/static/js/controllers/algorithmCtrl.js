@@ -17,7 +17,6 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
             $scope.userSolution = $scope.newSolution.solution;
             $scope.newSolution = {};
             $scope.actualSolution = $scope.current_algo.solution;
-            console.log($scope.userSolution, $scope.actualSolution);
         })
     }
 
@@ -31,7 +30,6 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
     algorithmFactory.getCurrentAlgo($scope.algo_id, function(data){
         $scope.current_algo = data;
         room = $scope.current_algo._id;
-
     });
 
     $('.btn.red').click(function(){
@@ -53,11 +51,8 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
     });
 
     socket.on("new_message_added", function(data){
-        console.log('senTT message', data);
         if(data.room == room){
-            console.log(data);
             $scope.messages.push(data);
-            console.log($scope.messages);
             $scope.num = $scope.messages.length;
         }
         $scope.message = {};
