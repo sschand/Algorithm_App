@@ -13,7 +13,9 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
     $scope.check = function(algo_id,user_id){
         var info = {algo_id: algo_id, solution: $scope.newSolution.solution, user_id: user_id}
         algorithmFactory.check(info, function(data){
-            console.log(data);
+            $scope.userSolution = $scope.newSolution.solution;
+            $scope.newSolution = {};
+            $scope.actualSolution = $scope.current_algo.solution;
         })
     }
 
@@ -52,11 +54,5 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
             $scope.num = $scope.messages.length;
         }
         $scope.message = {};
-
-
-        // add messages to algo db
-        //  algorithmFactory.addMessages($scope.algo_id, $scope.messages, function(data){
-        //     console.log('messages added to db', data);
-        // });
     });
 });

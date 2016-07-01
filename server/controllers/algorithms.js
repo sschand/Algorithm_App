@@ -77,7 +77,7 @@ module.exports = (function(){
                             if(err){
                                 console.log('error occured');
                             }else {
-                                //var algo ={algo_id:req.body.id, solution:""};
+
                                 // if(user.algorithms.length == 0){
                                 //     user.algorithms.push(algo);
                                 //     user.save();
@@ -91,7 +91,7 @@ module.exports = (function(){
                                             user.algorithms.push(algo);
                                             user.save();
                                             res.json({user: user});
-                                        // }
+
                                 //     }
                                 // }
                             }
