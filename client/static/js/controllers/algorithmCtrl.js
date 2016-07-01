@@ -32,8 +32,10 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
         room = $scope.current_algo._id;
     });
 
+    $(".pre_tag").hide();
     $('.btn.red').click(function(){
         $('#solution_form').hide();
+        $(".pre_tag").show();
         $('#show').show();
     })
 
