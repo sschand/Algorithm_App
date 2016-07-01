@@ -36,8 +36,6 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
 
     // User sends new message
     $scope.sendMessage = function(user_name){
-        // socket.emit("new_message", {name: user_name, message: $scope.message.text});
-
         socket.emit('new_message',  {name: user_name, message: $scope.message.text, room: room});
     };
 
@@ -46,7 +44,7 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
     });
 
     socket.on("new_message_added", function(data){
-            console.log('senTT message', data);
+        console.log('senTT message', data);
         if(data.room == room){
             console.log(data);
             $scope.messages.push(data);
