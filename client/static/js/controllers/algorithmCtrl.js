@@ -11,11 +11,13 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
     }
 
     $scope.check = function(algo_id,user_id){
-        var info = {algo_id: algo_id, solution: $scope.newSolution.solution, user_id: user_id}
+        var info = {algo_id: algo_id, solution: $scope.newSolution.solution, user_id: user_id};
+
         algorithmFactory.check(info, function(data){
             $scope.userSolution = $scope.newSolution.solution;
             $scope.newSolution = {};
             $scope.actualSolution = $scope.current_algo.solution;
+            console.log($scope.userSolution, $scope.actualSolution);
         })
     }
 
@@ -31,6 +33,11 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
         room = $scope.current_algo._id;
 
     });
+
+    $('.btn.red').click(function(){
+        $('#solution_form').hide();
+        $('#show').show();
+    })
 
     // New user entered algo
     socket.emit("got_new_user", {name: $scope.current_user[0].name});
