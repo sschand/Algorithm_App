@@ -77,8 +77,9 @@ module.exports = (function(){
                             if(err){
                                 console.log('error occured');
                             }else {
+                                var algo ={algo_id:req.body.id, solution:""};
                                 if(user.algorithms.length == 0){
-                                    user.algorithms.push(req.body.id);
+                                    user.algorithms.push(algo);
                                     user.save();
                                     res.json({user: user});
                                 } else {
@@ -86,7 +87,8 @@ module.exports = (function(){
                                         if(j == req.body.id){
                                             console.log('algorithm existed');
                                         } else {
-                                            user.algorithms.push(req.body.id);
+                                            var algo ={algo_id:req.body.id, solution:""};
+                                            user.algorithms.push(algo);
                                             user.save();
                                             res.json({user: user});
                                         }

@@ -34,20 +34,16 @@ module.exports = (function(){
 
   checkalgo: function(req,res){
       console.log('algo is: ', req.body);
+      var answer = req.body.solution;
       User.findOne({_id: req.body.user_id}, function(err, user){
           if(err){
               console.log('something went wrong');
           } else {
-              console.log(user);
-              for(var i in user.algorithms){
-                  if(user.algorithms[i] == req.body.algo_id){
-                      user.algorithms[i] = {algo_id: req.body.algo_id, solution: req.body.solution};
-                      user.save();
-                      console.log('user uisssssssss: ',user);
-                  }
-              }
-              user.save();
 
+              console.log(user);
+              var algo ={algo_id:req.body.algo_id, solution:answer};
+              user.solution.push(algo)
+              user.save();
           }
       })
   }
