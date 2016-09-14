@@ -34,7 +34,7 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory, use
 
     $(".pre_tag").hide();
 
-    $('#submit_user_solution').click(function(){
+    $('.submitSolution').click(function(){
         $('#solution_form').hide();
         $(".pre_tag").show();
         $('#show').show();
